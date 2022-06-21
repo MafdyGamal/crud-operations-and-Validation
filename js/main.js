@@ -166,7 +166,7 @@ function validationImage(){
         return true;
     }else{
         imageSrc.classList.add('is-invalid');
-        document.getElementById('validImage').innerHTML = "Please enter the link of the picture begins with https::// OR http::// ";
+        document.getElementById('validImage').innerHTML = "Please enter the link of the picture begins with https:// OR http:// ";
         return false;
     }
 }
