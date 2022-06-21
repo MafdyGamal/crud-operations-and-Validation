@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Alegreya+Sans+SC:wght@100&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Alegreya:ital@1&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!--Data Entry Form -->
+  <div class="container p-5">
+    <label for=""> Product Name</label>
+    <input type="text" id="productNameInp" oninput="validationProductName()" class="form-control">
+    <p id="validName" class=" text-danger"></p>
+    <label for=""> Product Code</label>
+    <input type="text" oninput="validationProductCode()" class="form-control" id="productCodeInp">
+    <p id="validcode"  class=" text-danger"></p>
+    <label for=""> Product Price</label>
+    <input type="number" class="form-control" id="productPriceInp">
+    <label for=""> Product Offer</label>
+    <input type="number" class="form-control" id="productOfferInp">
+    <label for=""> Image Source</label>
+    <input type="text" oninput="validationImage()" class="form-control" id="imageSrc">
+    <p id="validImage" class="text-danger"></p>
+    <button class="btn btn-dark my-3 " id="btnAdd">Add Product</button>
+    <input oninput="search(this.value)" type="text" class="form-control mb-3">
+    <div class="row" id="rowDisplay">
+    </div>
+  </div>
+  <!-- Display data -->
+  <div class="display-product">
+    
+    <div id="layOut" class="lay-out d-none justify-content-center align-items-center py-3 ">
+      <div class="conten  " id="displayImage">
+    
+          <i class="fa-solid fa-circle-xmark fs-3 d-flex justify-content-end m-3" id="close"></i> 
+          <div class="d-flex align-items-center justify-content-between px-2 h-100">
+            <i class="fa-solid fa-circle-arrow-left fs-3 " id="Previous"></i>
+            <i class="fa-solid fa-circle-arrow-right fs-3" id="next"></i>  
+          </div>
+      </div>
+    </div>
+    
+  </div>
+  
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
